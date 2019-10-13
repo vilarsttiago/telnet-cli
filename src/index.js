@@ -16,7 +16,7 @@ module.exports = class Telnet extends events.EventEmitter {
     return promise = new Promise((resolve, reject) => {
 
       const host = (typeof opts.host !== 'undefined' ? opts.host : '127.0.0.1');
-      const port = (typeof opts.port !== 'undefined' ? opts.port : '127.0.0.1');
+      const port = (typeof opts.port !== 'undefined' ? opts.port : 23);
       this.timeout = (typeof opts.timeout !== 'undefined' ? opts.timeout : 500);
 
       this.waitPrompt = (typeof opts.waitPrompt !== 'undefined' ? opts.waitPrompt : 'username:');
